@@ -1,5 +1,5 @@
 import { START_GAME } from './common.js';
-const ADD_GUESS = 'ADD_GUESS';
+export const ADD_GUESS = 'ADD_GUESS';
 const RESTORE_SWITCH_TO_BLOCK = 'RESTORE_SWITCH_TO_BLOCK';
 
 const initialState = {

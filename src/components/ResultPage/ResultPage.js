@@ -1,22 +1,8 @@
 import React from 'react';
-import zip from 'array-zip';
 import { connect } from 'react-redux';
 import { switchToNextPage } from '../../reducers/page.js';
 import { startGame } from "../../reducers/common.js";
 import styles from './ResultPage.css';
-
-const calculateScore = (cards, guesses) => {
-    return zip(guesses, cards)
-        .reduce((collector, item) => {
-            const [correctValue, guess] = item;
-            if (correctValue === guess) {
-                return [...collector, collector[collector.length - 1] + 1];
-            } else {
-                return [...collector, 0];
-            }
-        }, [0])
-        .reduce((sum, i) => sum + i, 0);    // 0 is added to make reduce work with empty initial array
-};
 
 class ResultPage extends React.Component {
     // Add the shouldComponentUpdate() method to prevent the page from re-rendering with zero score when the store is resetted
@@ -25,10 +11,9 @@ class ResultPage extends React.Component {
     }
 
     render() {
-        const { cards, guesses, restartGame } = this.props;
+        const { score, cardCount, restartGame } = this.props;
 
-        const score = calculateScore(cards, guesses);
-        const maximalScore = cards.length * (cards.length + 1) / 2;
+        const maximalScore = cardCount * (cardCount + 1) / 2;
 
         let praise;
         if (score < maximalScore / 2) {
@@ -55,15 +40,15 @@ class ResultPage extends React.Component {
 
 ResultPage.propTypes = {
     isActive: React.PropTypes.bool.isRequired,
-    cards: React.PropTypes.arrayOf(React.PropTypes.string),
-    guesses: React.PropTypes.arrayOf(React.PropTypes.string),
+    score: React.PropTypes.number.isRequired,
+    cardCount: React.PropTypes.number.isRequired,
     restartGame: React.PropTypes.func.isRequired
 };
 
 export default connect(
     state => ({
-        cards: state.remember.list,
-        guesses: state.restore.list
+        score: state.score,
+        cardCount: state.config.cardCount
     }),
     dispatch => ({
         restartGame: () => dispatch(startGame())
