@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { switchToNextPage } from '../../reducers/page.js';
 import { startGame } from "../../reducers/common.js";
 import styles from './ResultPage.css';
 
