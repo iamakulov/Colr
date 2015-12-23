@@ -37,6 +37,6 @@ export default connect(
     state => ({
         currentPage: state.page.current,
         restorePageActiveBlock: state.restore.currentBlock,
-        score: state.score
+        score: state.score.current
     })
 )(Score);

@@ -46,7 +46,7 @@ ResultPage.propTypes = {
 
 export default connect(
     state => ({
-        score: state.score,
+        score: state.score.current,
         cardCount: state.config.cardCount
     }),
     dispatch => ({

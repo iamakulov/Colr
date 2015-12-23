@@ -1,12 +1,19 @@
 import { START_GAME } from './common.js';
-export const SET_SCORE = 'SET_SCORE';
+const SET_SCORE = 'SET_SCORE';
 
-const initialState = 0;
+const initialState = {
+    current: 0,
+    latestAdded: 0
+};
 
 const scoreReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_SCORE:
-            return action.score;
+            return {
+                ...state,
+                current: action.score,
+                latestAdded: Math.max(action.score - state.current, 0)
+            };
         case START_GAME:
             return initialState;
         default:
