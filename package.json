@@ -1,0 +1,49 @@
+{
+  "name": "colr",
+  "version": "2.0.0",
+  "description": "A card-remembering game",
+  "scripts": {
+    "build": "webpack",
+    "copy-assets": "cpx src/index.html dist --watch",
+    "dev-server": "webpack-dev-server -d --progress --colors --content-base dist --inline --hot",
+    "dev": "concurrent --kill-others --raw \"npm run copy-assets\" \"npm run dev-server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamakulov/Colr.git"
+  },
+  "author": "Ivan Akulov <me@iamakulov.com> (http://iamakulov.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamakulov/Colr/issues"
+  },
+  "homepage": "https://github.com/iamakulov/Colr#readme",
+  "dependencies": {
+    "array-zip": "^1.0.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-redux": "^4.0.2",
+    "redux": "^3.0.5",
+    "redux-logger": "^2.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.2.1",
+    "babel-core": "^6.3.21",
+    "babel-loader": "^6.2.0",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-2": "^6.3.13",
+    "concurrently": "^1.0.0",
+    "cpx": "^1.2.1",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "json-loader": "^0.5.4",
+    "postcss-loader": "^0.8.0",
+    "react-hot-loader": "^1.3.0",
+    "redux-devtools": "^3.0.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}

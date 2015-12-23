@@ -1,0 +1,30 @@
+.block {
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+    transition: transform 1.5s ease, box-shadow 1.5s ease;
+
+    will-change: transform;
+}
+
+.blockBeforeCurrent {
+    composes: block;
+    transform: translateX(calc(-50vw - 50%)) translateY(-50%);
+}
+
+.blockCurrent {
+    composes: block;
+    transform: translateX(calc(50vw - 50%)) translateY(-50%);
+}
+
+.blockRightAfterCurrent {
+    composes: block;
+    transform: translateX(calc(100vw - 10px)) translateY(-50%);
+    box-shadow: -4px 0 8px rgba(1, 1, 1, 0.3);
+}
+
+.blockAfterCurrent {
+    composes: block;
+    transform: translateX(calc(150vw - 50%)) translateY(-50%);
+}

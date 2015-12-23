@@ -1,0 +1,37 @@
+.page {
+    composes: pageContent from "../common.css";
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    color: white;
+    text-align: center;
+}
+
+.headerName {
+    /* Unset h1 styles */
+    margin: 0;
+    font-weight: inherit;
+
+    font-size: 130px;
+}
+
+.headerDescription {
+    margin-top: 10px;
+
+    font-size: 50px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.button {
+    composes: button from "../common.css";
+}

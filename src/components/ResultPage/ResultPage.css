@@ -1,0 +1,33 @@
+.page {
+    composes: pageContent from "../common.css";
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    text-align: center;
+}
+
+.praise {
+    font-size: 100px;
+}
+
+.points {
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+.score {
+    font-size: 150px;
+}
+
+.menu {
+    margin: 80px;
+}
+
+.button {
+    composes: button from "../common.css";
+}

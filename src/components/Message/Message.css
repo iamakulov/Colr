@@ -1,0 +1,13 @@
+.message {
+    color: white;
+    text-align: center;
+}
+
+.text {
+    height: 300px;
+    font-size: 60px;
+}
+
+.okButton {
+    composes: button from "../common.css";
+}

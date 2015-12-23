@@ -1,0 +1,5 @@
+{
+  "allColors": ["greed", "red", "yellow", "blue", "orange", "magenda"],
+  "currentColors": ["green", "red", "yellow", "blue"],
+  "cardCount": 10
+}

@@ -1,0 +1,23 @@
+.counter {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+
+    color: white;
+
+    font-size: 80px;
+    letter-spacing: 1px;
+
+    transition: opacity 1.5s ease;
+    transform: translateX(-50%);
+}
+
+.counterVisible {
+    composes: counter;
+    opacity: 1;
+}
+
+.counterInvisible {
+    composes: counter;
+    opacity: 0;
+}

@@ -1,0 +1,11 @@
+.page {
+    composes: pageContent from "../common.css";
+}
+
+.cardBundle {
+    display: flex;
+}
+
+.cardBundleItem + .cardBundleItem {
+    margin-left: 20px;
+}
