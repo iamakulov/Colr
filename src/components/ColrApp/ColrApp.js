@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import styles from './ColrApp.css';
 
 import Counter from '../Counter/Counter.js';
+import Score from '../Score/Score.js';
 import IndexPage from '../IndexPage/IndexPage.js';
 import RememberCardsPage from '../RememberCardsPage/RememberCardsPage.js';
 import RestoreCardsPage from '../RestoreCardsPage/RestoreCardsPage.js';
@@ -13,6 +14,8 @@ const allPages = [IndexPage, RememberCardsPage, RestoreCardsPage, ResultPage];
 const ColrApp = ({ currentPageIndex }) => {
     return <div className={styles.container}>
         <Counter />
+
+        <Score />
 
         <div className={styles.pages}>
             { allPages.map((Page, i) => {
