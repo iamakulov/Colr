@@ -4,6 +4,29 @@
     fontWeight: fontWeight;
 }
 
+.counter {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+
+    color: white;
+
+    font-size: 80px;
+    letter-spacing: 1px;
+
+    transform: translateX(-50%);
+}
+
+.score {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    color: white;
+
+    font-size: 60px;
+}
+
 .container {
     width: 100%;
     height: 100%;

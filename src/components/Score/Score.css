@@ -1,12 +1,4 @@
 .score {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-
-    color: white;
-
-    font-size: 60px;
-
     transition: opacity 1.5s ease;
 }
 

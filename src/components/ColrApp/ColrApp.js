@@ -13,9 +13,13 @@ const allPages = [IndexPage, RememberCardsPage, RestoreCardsPage, ResultPage];
 
 const ColrApp = ({ currentPageIndex }) => {
     return <div className={styles.container}>
-        <Counter />
+        <div className={styles.counter}>
+            <Counter />
+        </div>
 
-        <Score />
+        <div className={styles.score}>
+            <Score />
+        </div>
 
         <div className={styles.pages}>
             { allPages.map((Page, i) => {
