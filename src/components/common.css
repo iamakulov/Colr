@@ -1,8 +1,3 @@
-:import("./variables.css") {
-    fontFamily: fontFamily;
-    fontWeight: fontWeight;
-}
-
 .pageContent {
     width: 100%;
     height: 100%;
@@ -16,9 +11,9 @@
     background-color: #0a6a8e;
     color: white;
 
-    font-family: fontFamily;
-    font-size: 1rem;
-    font-weight: fontWeight;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 
     cursor: pointer;
     transition: background-color 0.3s ease;
