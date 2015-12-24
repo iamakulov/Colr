@@ -21,8 +21,10 @@ const ColrApp = ({ currentPageIndex }) => {
                     transform: `translateX(${offset}%)`
                 };
 
-                return <div className={styles.page} style={style} key={i}>
-                    <Page isActive={i === currentPageIndex}/>
+                const isActive = i === currentPageIndex;
+
+                return <div className={isActive ? styles.pageActive : styles.page} style={style} key={i}>
+                    <Page isActive={isActive}/>
                 </div>;
             }) }
         </div>

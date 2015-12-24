@@ -60,3 +60,12 @@
     transition: transform transitionDuration cubic-bezier(0.420, 0.000, 0.310, 1.000);
     will-change: transform;
 }
+
+.pageActive {
+    composes: page;
+}
+
+/* Make the fist page have a custom transition when restarting the game. */
+.pageActive:first-child {
+    transition: transform transitionDuration 0.1s cubic-bezier(.78,0,0,.97);
+}
