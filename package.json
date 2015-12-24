@@ -1,6 +1,6 @@
 {
   "name": "colr",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "A card-remembering game",
   "scripts": {
     "build": "better-npm-run build",
