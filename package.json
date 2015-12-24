@@ -1,6 +1,6 @@
 {
   "name": "colr",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A card-remembering game",
   "scripts": {
     "build": "npm run copy-assets && npm run webpack",
