@@ -4,8 +4,12 @@
 
 .cardBundle {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: -10px;
 }
 
-.cardBundleItem + .cardBundleItem {
-    margin-left: 20px;
+.cardBundleItem {
+    margin: 10px;
 }

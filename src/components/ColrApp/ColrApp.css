@@ -11,7 +11,7 @@
 
     color: white;
 
-    font-size: 80px;
+    font-size: 1.6rem;
     letter-spacing: 1px;
 
     transform: translateX(-50%);
@@ -19,12 +19,12 @@
 
 .score {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 0.6rem;
+    right: 0.6rem;
 
     color: white;
 
-    font-size: 60px;
+    font-size: 1.2rem;
 }
 
 .pointPopup {

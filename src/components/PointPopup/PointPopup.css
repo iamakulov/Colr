@@ -1,14 +1,14 @@
 .popup {
-    width: 100px;
-    height: 100px;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
 
     color: black;
     background-color: white;
 
     text-align: center;
-    font-size: 60px;
-    line-height: 100px;
+    font-size: 1.2rem;
+    line-height: 2rem;
 
     transition: opacity 1s ease;
 }

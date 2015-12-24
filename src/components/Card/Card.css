@@ -1,7 +1,7 @@
 .card {
-    width: 170px;
-    height: 170px;
-    border: 10px solid white;
+    width: 3.4rem;
+    height: 3.4rem;
+    border: 0.2rem solid white;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 

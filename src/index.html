@@ -4,6 +4,7 @@
     <title>Colr</title>
     <meta charset="utf-8">
     <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Roboto:300,100,400">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         html, body {
             height: 100%;
@@ -19,6 +20,18 @@
 
         #container {
             height: 100%;
+        }
+
+        @media (min-width: 501px) and (min-height: 501px) {
+            :root {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 500px), (max-height: 500px) {
+            :root {
+                font-size: 30px;
+            }
         }
     </style>
 </head>

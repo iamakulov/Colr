@@ -12,20 +12,46 @@
 }
 
 .praise {
-    font-size: 100px;
+    font-size: 2rem;
 }
 
 .points {
-    margin-top: 50px;
-    font-size: 50px;
+    margin-top: 1rem;
+    font-size: 1rem;
 }
 
 .score {
-    font-size: 150px;
+    font-size: 3rem;
+}
+
+@media (min-height: 701px) {
+    .score {
+        font-size: 3rem;
+    }
+}
+
+@media (max-height: 700px) {
+    /** Display all points text in a single line */
+    .points {
+        display: flex;
+    }
+
+    .score {
+        font-size: 1rem;
+    }
+
+    /** Add non-breaking spaces around score to make it appear as a separate word */
+    .score::before {
+        content: "\00a0";
+    }
+
+    .score::after {
+        content: "\00a0";
+    }
 }
 
 .menu {
-    margin: 80px;
+    margin-top: 1.6rem;
 }
 
 .button {

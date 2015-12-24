@@ -20,8 +20,7 @@
 
 .blockRightAfterCurrent {
     composes: block;
-    transform: translateX(calc(100vw - 10px)) translateY(-50%);
-    box-shadow: -4px 0 8px rgba(1, 1, 1, 0.3);
+    transform: translateX(calc(100vw - 0.2rem)) translateY(-50%);
 }
 
 .blockAfterCurrent {
