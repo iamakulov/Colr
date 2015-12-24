@@ -1,0 +1,25 @@
+.popup {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    color: black;
+    background-color: white;
+
+    text-align: center;
+    font-size: 60px;
+    line-height: 100px;
+
+    transition: opacity 1s ease;
+}
+
+.popupVisible {
+    composes: popup;
+    transition: none;
+    opacity: 1;
+}
+
+.popupInvisible {
+    composes: popup;
+    opacity: 0;
+}
