@@ -10,7 +10,7 @@
     font-size: 1.2rem;
     line-height: 2rem;
 
-    transition: opacity 1s ease;
+    transition: opacity 0.3s ease;
 }
 
 .popupVisible {

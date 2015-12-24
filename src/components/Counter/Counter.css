@@ -1,5 +1,5 @@
 .counter {
-    transition: opacity 1.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .counterVisible {
