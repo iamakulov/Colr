@@ -4,7 +4,7 @@
 
 > A simple color-remembering game
 
-## Section for People
+## Gameplay
 
 The game is beautiful:
 
@@ -16,7 +16,7 @@ The game is useful:
 
 [→ Play it.](http://iamakulov.com/works/colr)
 
-## Section for Robots
+## Development
 
 Colr is build with React, Redux, CSS Modules and Webpack.
 
