@@ -36,6 +36,7 @@ class RestoreCardsPage extends React.Component {
                 <Message onOkClicked={this._switchToNextBlockOrPage}>
                     <p className={styles.paragraph}>Second step.</p>
                     <p className={styles.paragraph}>Restore the color order.</p>
+                    <p className={styles.paragraph}>The&nbsp;more colors you&nbsp;restore in a&nbsp;row, the&nbsp;more points you&nbsp;get.</p>
                 </Message>
 
                 {new Array(cardCount).fill(null).map((_, id) =>
