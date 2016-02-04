@@ -34,8 +34,8 @@ class RestoreCardsPage extends React.Component {
         return <div className={styles.page}>
             <BlockGallery currentBlock={currentBlock}>
                 <Message onOkClicked={this._switchToNextBlockOrPage}>
-                    <div>Second step.</div>
-                    <div>Restore the color order.</div>
+                    <p className={styles.paragraph}>Second step.</p>
+                    <p className={styles.paragraph}>Restore the color order.</p>
                 </Message>
 
                 {new Array(cardCount).fill(null).map((_, id) =>

@@ -13,3 +13,7 @@
 .cardBundleItem {
     margin: 10px;
 }
+
+.paragraph {
+    composes: paragraph from "../common.css";
+}

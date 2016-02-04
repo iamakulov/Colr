@@ -50,8 +50,8 @@ class RememberCardsPage extends React.Component {
         return <div className={styles.page}>
             <BlockGallery currentBlock={currentBlock}>
                 <Message onOkClicked={this._startAnimation}>
-                    <div>First step.</div>
-                    <div>Remember the color order.</div>
+                    <p className={styles.paragraph}>First step.</p>
+                    <p className={styles.paragraph}>Remember the color order.</p>
                 </Message>
 
                 {cardList.map((card, id) =>

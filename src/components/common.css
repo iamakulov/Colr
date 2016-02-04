@@ -29,3 +29,11 @@
 .button:active {
     background-color: #075978;
 }
+
+.paragraph {
+    margin: 0;
+}
+
+.paragraph + .paragraph {
+    margin-top: 0.4rem;
+}
