@@ -9,7 +9,7 @@ const configureStore = initialState => {
 
     return compose(
         applyMiddleware(logger, generateCards, calculateScore),
-        window.devToolsExtension ? window.devToolsExtension() : f => f
+        typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f
     )(createStore)(reducer, initialState);
 };
 
