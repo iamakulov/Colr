@@ -7,10 +7,14 @@ import reducer from './reducers/index.js';
 const configureStore = initialState => {
     const logger = createLogger();
 
-    return compose(
-        applyMiddleware(logger, generateCards, calculateScore),
-        typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f
-    )(createStore)(reducer, initialState);
+    return createStore(
+        reducer,
+        initialState,
+        compose(
+            applyMiddleware(logger, generateCards, calculateScore),
+            typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f
+        )
+    );
 };
 
 export default configureStore;
