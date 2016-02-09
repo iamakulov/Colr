@@ -4,14 +4,11 @@
   "description": "A card-remembering game",
   "scripts": {
     "build": "better-npm-run build",
-    "copy-assets": "cpx src/index.html dist",
-    "watch-assets": "cpx src/index.html dist --watch",
-    "webpack-dev-server": "webpack-dev-server -d --progress --colors --content-base dist --inline --hot",
-    "dev": "concurrent --kill-others --raw \"npm run watch-assets\" \"npm run webpack-dev-server\""
+    "dev": "webpack-dev-server -d --progress --colors --content-base dist --inline --hot"
   },
   "betterScripts": {
     "build": {
-      "command": "npm run copy-assets && webpack -p",
+      "command": "webpack -p",
       "env": {
         "NODE_ENV": "production"
       }
@@ -44,10 +41,9 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-2": "^6.3.13",
     "better-npm-run": "0.0.5",
-    "concurrently": "^1.0.0",
-    "cpx": "^1.2.1",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.8.1",
     "json-loader": "^0.5.4",
     "postcss-loader": "^0.8.0",
     "react-hot-loader": "^1.3.0",

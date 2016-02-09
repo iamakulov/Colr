@@ -1,8 +1,9 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import { Provider } from 'react-redux';
+
+import './index.no-modules.css';
 import ColrApp from './components/ColrApp/ColrApp.js';
 
 import config from './config.json';

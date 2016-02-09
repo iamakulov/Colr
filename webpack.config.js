@@ -2,6 +2,7 @@
 
 let path = require('path');
 let autoprefixer = require('autoprefixer');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: path.join(__dirname, 'src', 'index.js'),
@@ -17,7 +18,11 @@ module.exports = {
                 loaders: ['react-hot-loader', 'babel-loader?presets[]=react&presets[]=es2015&presets[]=stage-2']
             },
             {
-                test: /\.css$/,
+                test: /\.no-modules\.css$/,
+                loaders: ['style-loader', 'css-loader', 'postcss-loader']
+            },
+            {
+                test: path => path.endsWith('.css') && !path.endsWith('.no-modules.css'),
                 loaders: ['style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]--[local]--[hash:base64:5]', 'postcss-loader']
             },
             {
@@ -32,5 +37,8 @@ module.exports = {
     },
     postcss: function () {
         return [autoprefixer({ browsers: ['last 2 versions'] })];
-    }
+    },
+    plugins: [new HtmlWebpackPlugin({
+        template: path.join(__dirname, 'src', 'index.html')
+    })]
 };

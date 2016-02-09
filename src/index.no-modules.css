@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    /* position: relative to disable scrolling on mobiles */
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    background: #035371;
+}
+
+#container {
+    height: 100%;
+}
+
+@media (min-width: 501px) and (min-height: 501px) {
+    :root {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 500px), (max-height: 500px) {
+    :root {
+        font-size: 30px;
+    }
+}
