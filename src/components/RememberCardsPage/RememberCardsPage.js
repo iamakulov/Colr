@@ -45,13 +45,13 @@ class RememberCardsPage extends React.Component {
     }
 
     render() {
-        const { cardList, currentBlock } = this.props;
+        const { cardList, currentBlock, colors = [], cardCount = 0 } = this.props;
 
         return <div className={styles.page}>
             <BlockGallery currentBlock={currentBlock}>
                 <Message onOkClicked={this._startAnimation}>
                     <p className={styles.paragraph}>First step.</p>
-                    <p className={styles.paragraph}>Remember the color order.</p>
+                    <p className={styles.paragraph}>You’ll see {cardCount}&nbsp;cards of&nbsp;{colors.length}&nbsp;different colors. Remember the&nbsp;color order.</p>
                 </Message>
 
                 {cardList.map((card, id) =>
@@ -72,7 +72,9 @@ RememberCardsPage.propTypes = {
 export default connect(
     state => ({
         cardList: state.remember.list,
-        currentBlock: state.remember.currentBlock
+        currentBlock: state.remember.currentBlock,
+        colors: state.config.currentColors,
+        cardCount: state.config.cardCount
     }),
     dispatch => ({
         switchToNextPage: () => dispatch(switchToNextPage()),
