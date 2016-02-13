@@ -1,4 +1,4 @@
-import { START_GAME } from './common.js';
+import { RESET_GAME } from './common.js';
 const SET_SCORE = 'SET_SCORE';
 
 const initialState = {
@@ -14,7 +14,7 @@ const scoreReducer = (state = initialState, action) => {
                 current: action.score,
                 latestAdded: Math.max(action.score - state.current, 0)
             };
-        case START_GAME:
+        case RESET_GAME:
             return initialState;
         default:
             return state;

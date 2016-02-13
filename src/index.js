@@ -9,7 +9,7 @@ import ColrApp from './components/ColrApp/ColrApp.js';
 import config from './config.json';
 import configureStore from './store.js';
 import { setConfig } from './reducers/config.js';
-import { startGame } from './reducers/common.js';
+import { resetGame } from './reducers/common.js';
 
 const store = configureStore();
 
@@ -24,4 +24,4 @@ const render = () => {
 
 store.subscribe(render);
 store.dispatch(setConfig(config));
-store.dispatch(startGame());
+store.dispatch(resetGame());

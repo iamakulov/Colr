@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { startGame } from "../../reducers/common.js";
+import { resetGame } from "../../reducers/common.js";
 import styles from './ResultPage.css';
 
 class ResultPage extends React.Component {
@@ -50,6 +50,6 @@ export default connect(
         cardCount: state.config.cardCount
     }),
     dispatch => ({
-        restartGame: () => dispatch(startGame())
+        restartGame: () => dispatch(resetGame())
     })
 )(ResultPage);

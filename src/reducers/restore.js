@@ -1,4 +1,4 @@
-import { START_GAME } from './common.js';
+import { RESET_GAME } from './common.js';
 export const ADD_GUESS = 'ADD_GUESS';
 const RESTORE_SWITCH_TO_BLOCK = 'RESTORE_SWITCH_TO_BLOCK';
 
@@ -19,7 +19,7 @@ const restoreReducer = (state = initialState, action) => {
                 ...state,
                 currentBlock: action.index
             };
-        case START_GAME:
+        case RESET_GAME:
             return initialState;
         default:
             return state;

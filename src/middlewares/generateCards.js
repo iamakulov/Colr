@@ -1,4 +1,4 @@
-import { START_GAME } from '../reducers/common.js';
+import { RESET_GAME } from '../reducers/common.js';
 import { setColors } from '../reducers/remember.js';
 
 const generateCards = (amount, colors) => {
@@ -11,7 +11,7 @@ const generateCards = (amount, colors) => {
 const generateCardsMiddleware = store => next => action => {
     const result = next(action);
 
-    if (action.type === START_GAME) {
+    if (action.type === RESET_GAME) {
         const { cardCount, currentColors } = store.getState().config;
         store.dispatch(setColors(generateCards(cardCount, currentColors)));
     }

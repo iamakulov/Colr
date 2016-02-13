@@ -1,4 +1,4 @@
-import { START_GAME } from './common.js';
+import { RESET_GAME } from './common.js';
 
 const REMEMBER_SWITCH_TO_BLOCK = 'REMEMBER_SWITCH_TO_BLOCK';
 const SET_COLORS = 'SET_COLORS';
@@ -20,7 +20,7 @@ const rememberReducer = (state = initialState, action) => {
                 ...state,
                 list: action.colors
             };
-        case START_GAME:
+        case RESET_GAME:
             return initialState;
         default:
             return state;

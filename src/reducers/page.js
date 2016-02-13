@@ -1,4 +1,4 @@
-import { START_GAME } from './common.js';
+import { RESET_GAME } from './common.js';
 const SWITCH_TO_NEXT_PAGE = 'SWITCH_TO_NEXT_PAGE';
 
 const initialState = {
@@ -12,7 +12,7 @@ const pageReducer = (state = initialState, action) => {
                 ...state,
                 current: state.current + 1
             };
-        case START_GAME:
+        case RESET_GAME:
             return initialState;
         default:
             return state;
