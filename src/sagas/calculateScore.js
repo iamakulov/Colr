@@ -1,8 +1,10 @@
+import { takeEvery } from 'redux-saga';
+import { put } from 'redux-saga/effects';
 import zip from 'array-zip';
 import { ADD_GUESS } from '../reducers/restore.js';
 import { setScore } from '../reducers/score.js';
 
-const calculateScore = (cards, guesses) => {
+const calculateScoreHelper = (cards, guesses) => {
     return zip(guesses, cards)
         .reduce((collector, item) => {
             const [correctValue, guess] = item;
@@ -15,17 +17,15 @@ const calculateScore = (cards, guesses) => {
         .reduce((sum, i) => sum + i, 0);    // 0 is added to make reduce work with empty initial array
 };
 
-const generateCardsMiddleware = store => next => action => {
-    const result = next(action);
+function* calculateScore(getState) {
+    const cards = getState().remember.list;
+    const guesses = getState().restore.list;
 
-    if (action.type === ADD_GUESS) {
-        const cards = store.getState().remember.list;
-        const guesses = store.getState().restore.list;
+    yield put(setScore(calculateScoreHelper(cards, guesses)));
+}
 
-        store.dispatch(setScore(calculateScore(cards, guesses)));
-    }
+function *watchAddGuessToCalculateScore(getState) {
+    yield* takeEvery(ADD_GUESS, calculateScore, getState);
+}
 
-    return result;
-};
-
-export default generateCardsMiddleware;
+export default watchAddGuessToCalculateScore;
